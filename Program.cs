@@ -17,7 +17,6 @@ internal class Program
         Console.WriteLine($"Subtract: {a} - {b} = {calculator.Subtract(a, b)}");
         Console.WriteLine($"Divide: {a} / {b} = {calculator.Divide(a, b)}");
         Console.WriteLine($"Multiply: {a} * {b} = {calculator.Multiply(a, b)}");
-      
 
         Console.WriteLine("\nTesting Divide by Zero handling:");
         try
