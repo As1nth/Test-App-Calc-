@@ -18,6 +18,17 @@ internal class Program
         Console.WriteLine($"Divide: {a} / {b} = {calculator.Divide(a, b)}");
         Console.WriteLine($"Multiply: {a} * {b} = {calculator.Multiply(a, b)}");
         Console.WriteLine($"Power: {a} ^ {b} = {calculator.Power(a, b)}");
+        Console.WriteLine($"SquareRoot(16): {calculator.SquareRoot(16)}");
+        Console.WriteLine($"SquareRoot(0): {calculator.SquareRoot(0)}");
+
+        try
+        {
+            calculator.SquareRoot(-4);
+        }
+        catch (ArgumentOutOfRangeException ex)
+        {
+            Console.WriteLine($"SquareRoot(-4): Correctly threw {ex.GetType().Name}");
+        }
 
         Console.WriteLine("\nDemo finished successfully.");
     }
