@@ -42,6 +42,15 @@ internal class Program
             Console.WriteLine($"Factorial(-1): Correctly threw {ex.GetType().Name}");
         }
 
+        try
+        {
+            calculator.Divide(10, 0);
+        }
+        catch (DivideByZeroException ex)
+        {
+            Console.WriteLine($"Divide(10, 0): Correctly threw {ex.GetType().Name} - {ex.Message}");
+        }
+
         Console.WriteLine("\nDemo finished successfully.");
     }
 }
