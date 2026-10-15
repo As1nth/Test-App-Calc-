@@ -51,6 +51,33 @@ internal class Program
             Console.WriteLine($"Divide(10, 0): Correctly threw {ex.GetType().Name} - {ex.Message}");
         }
 
+        try
+        {
+            calculator.Add(int.MaxValue, 1);
+        }
+        catch (OverflowException ex)
+        {
+            Console.WriteLine($"Add(int.MaxValue, 1): Correctly threw {ex.GetType().Name}");
+        }
+
+        try
+        {
+            calculator.Subtract(int.MinValue, 1);
+        }
+        catch (OverflowException ex)
+        {
+            Console.WriteLine($"Subtract(int.MinValue, 1): Correctly threw {ex.GetType().Name}");
+        }
+
+        try
+        {
+            calculator.Multiply(int.MaxValue, 2);
+        }
+        catch (OverflowException ex)
+        {
+            Console.WriteLine($"Multiply(int.MaxValue, 2): Correctly threw {ex.GetType().Name}");
+        }
+
         Console.WriteLine("\nDemo finished successfully.");
     }
 }

@@ -4,12 +4,12 @@ public class Calculator
 {
     public int Add(int a, int b)
     {
-        return a + b;
+        return checked(a + b);
     }
 
     public int Subtract(int a, int b)
     {
-        return a - b;
+        return checked(a - b);
     }
 
     public int Divide(int a, int b)
@@ -24,7 +24,7 @@ public class Calculator
 
     public int Multiply(int a, int b)
     {
-        return a * b;
+        return checked(a * b);
     }
 
     public double Average(int a, int b)
