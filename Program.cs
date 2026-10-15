@@ -30,6 +30,18 @@ internal class Program
             Console.WriteLine($"SquareRoot(-4): Correctly threw {ex.GetType().Name}");
         }
 
+        Console.WriteLine($"Factorial(0): {calculator.Factorial(0)}");
+        Console.WriteLine($"Factorial(5): {calculator.Factorial(5)}");
+
+        try
+        {
+            calculator.Factorial(-1);
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine($"Factorial(-1): Correctly threw {ex.GetType().Name}");
+        }
+
         Console.WriteLine("\nDemo finished successfully.");
     }
 }
