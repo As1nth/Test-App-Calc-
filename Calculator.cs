@@ -41,4 +41,25 @@ public class Calculator
 
         return Math.Sqrt(number);
     }
+
+    public long Factorial(int n)
+    {
+        if (n < 0)
+        {
+            throw new ArgumentException("Cannot calculate factorial of a negative number.", nameof(n));
+        }
+
+        if (n > 20)
+        {
+            throw new OverflowException("Factorial for values greater than 20 causes 64-bit integer overflow.");
+        }
+
+        long result = 1;
+        for (int i = 2; i <= n; i++)
+        {
+            result *= i;
+        }
+
+        return result;
+    }
 }
